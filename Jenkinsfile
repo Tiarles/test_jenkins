@@ -1,4 +1,15 @@
 pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                bat 'set'
+            }
+        }
+    }
+}
+
+/*pipeline {
     agent { docker { image 'python:3.5.1' } }
     stages {
         stage('build') {
@@ -7,7 +18,7 @@ pipeline {
             }
         }
     }
-}
+}*/
 
 
 /*pipeline{
