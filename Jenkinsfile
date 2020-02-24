@@ -3,11 +3,11 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                cmd 'python --version'
+                cmd /c 'python --version'
             }
         }
     }
-}
+}   
 
 /*pipeline{
     agent any
