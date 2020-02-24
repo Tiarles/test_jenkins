@@ -1,7 +1,15 @@
 pipeline {
     agent { docker { image 'python:3.5.1' } }
-    node("dockerAgentTest") { stage('build') { bat 'python --version' } }
-}   
+    node("dockerAgentTest"){
+    stages {
+        stage('build') {
+            steps {
+                bat 'python --version'
+            }
+        }
+    }
+}
+}
 
 /*pipeline{
     agent any
