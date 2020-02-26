@@ -1,5 +1,6 @@
 pipeline {
     agent { docker { image 'windows_typhoon:install-typhoon' } }
+
     stages {
         stage('build') {
             steps {
