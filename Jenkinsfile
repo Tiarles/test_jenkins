@@ -1,16 +1,5 @@
 pipeline {
-    agent any
-    stages {
-        stage('Build') {
-            steps {
-                bat 'set'
-            }
-        }
-    }
-}
-
-/*pipeline {
-    agent { docker { image 'python:3.5.1' } }
+    agent { docker { image 'windows_typhoon:install-typhoon' } }
     stages {
         stage('build') {
             steps {
@@ -18,7 +7,7 @@ pipeline {
             }
         }
     }
-}*/
+}
 
 
 /*pipeline{
