@@ -1,5 +1,5 @@
 pipeline {
-    agent {docker {image 'windows_typhoon:licensed-typhoon'}}
+    agent {docker {image 'mcr.microsoft.com/windows:1903'}}
 
     stages {
         stage('build') {
@@ -9,6 +9,22 @@ pipeline {
         }
     }
 }
+
+/*docker run -d -t -w "C:/Program Files (x86)/Jenkins/workspace/stJenkinsDockerPipeline_master_3/" ^
+    -v "C:/Program Files (x86)/Jenkins/workspace/stJenkinsDockerPipeline_master_3/:C:/Program Files (x86)/Jenkins/workspace/stJenkinsDockerPipeline_master_3/" ^
+    -v "C:/Program Files (x86)/Jenkins/workspace/stJenkinsDockerPipeline_master_3@tmp/:C:/Program Files (x86)/Jenkins/workspace/stJenkinsDockerPipeline_master_3@tmp/" ^
+    -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** ^
+    -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** ^
+    windows_typhoon:licensed-typhoon cmd.exe
+
+    --detach , -d		Run container in background and print container ID
+    --tty , -t		Allocate a pseudo-TTY
+    --workdir , -w		Working directory inside the container
+    --volume , -v		Bind mount a volume
+    --env , -e		Set environment variables
+
+*/
+
 
 
 /*pipeline {
