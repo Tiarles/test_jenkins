@@ -25,8 +25,6 @@ pipeline {
 
 */
 
-
-
 /*pipeline {
     agent any
 
