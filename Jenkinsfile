@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'windows_typhoon:licensed-typhoon'
-            args '-i'
+            args '-it'
            }
      }
 
