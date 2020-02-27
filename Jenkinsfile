@@ -2,7 +2,6 @@ pipeline {
     agent {
         docker {
             image 'ubuntu:xenial'
-            label 'ubuntu_tmp'
         }
     }
 
