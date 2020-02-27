@@ -1,7 +1,5 @@
 pipeline {
-    //agent { docker { image 'windows_typhoon:licensed-typhoon' } }
-
-    agent any
+    agent { docker { image 'windows_typhoon:licensed-typhoon' } }
 
     stages {
         stage('build') {
