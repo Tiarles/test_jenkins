@@ -1,15 +1,11 @@
 pipeline {
-    agent {
-        docker {
-            image 'ubuntu:xenial'
-        }
-    }
+    agent { docker { image 'windows_typhoon:licensed-typhoon'} }
 
     stages {
         stage('build') {
             steps {
                 // sh 'typhoon-python.cmd -m pytest --alluredir=report --clean-alluredir --log-cli-level=INFO "C:/Program Files/Typhoon HIL Control Center 2019.4 sp2/examples/scripts/basic model/test_model_basic.py"'
-                sh 'apt update'
+                bat 'set'
             }
         }
     }
