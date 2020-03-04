@@ -5,6 +5,7 @@ pipeline {
         stage('build') {
             steps {
                 bat 'dir'
+                bat 'docker --version'
                 bat 'set APPDATA=C:\\Users\\Tiarles\\AppData\\Roaming'
                 bat 'typhoon-python generateAPickle.py'
             }
