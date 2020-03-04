@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                bat '"C:\Users\Tiarles\AppData\Roaming\typhoon\2019.4 SP2\python_portables\python3_portable\Scripts\python" generateAPickle.py'
+                bat '"C:\\Users\\Tiarles\\AppData\\Roaming\\typhoon\\2019.4 SP2\\python_portables\\python3_portable\\Scripts\\python" generateAPickle.py'
             }
         }
     }
