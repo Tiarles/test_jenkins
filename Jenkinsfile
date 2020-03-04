@@ -5,6 +5,7 @@ pipeline {
         stage('build') {
             steps {
                 bat 'dir'
+                bat 'echo %APPDATA%'
                 bat 'typhoon-python generateAPickle.py'
             }
         }
