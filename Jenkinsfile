@@ -5,7 +5,7 @@ pipeline {
         stage('build') {
             steps {
                 bat 'dir'
-                bat 'typhoon-python.cmd generateAPickle.py'
+                bat 'typhoon-python generateAPickle.py'
             }
         }
     }
