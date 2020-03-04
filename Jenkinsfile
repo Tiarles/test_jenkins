@@ -1,10 +1,13 @@
 pipeline {
-    agent {docker {image 'mcr.microsoft.com/windows:1903'}}
+    agent any
 
     stages {
         stage('build') {
             steps {
-                 bat 'set'
+                bat 'docker container rm -f windows_typhoon_container_tmp'
+                bat 'docker run -it -d --name windows_typhoon_container_tmp windows_typhoon:licensed-typhoon'
+                // sh 'typhoon-python.cmd -m pytest --alluredir=report --clean-alluredir --log-cli-level=INFO "C:/Program Files/Typhoon HIL Control Center 2019.4 sp2/examples/scripts/basic model/test_model_basic.py"'
+                bat 'docker exec -i windows_typhoon_container_tmp cmd /c "set"'
             }
         }
     }
